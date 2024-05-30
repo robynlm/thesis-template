@@ -1,0 +1,45 @@
+\documentclass[11pt, a4paper, oldfontcommands]{memoir}
+\input{formating}
+\addbibresource{Ref.bib} 
+
+\begin{document}
+    % from here start only on right page
+    \frontmatter
+    \include{frontmatter/Title}
+    \cleardoublepage
+    \include{frontmatter/Declaration}
+    \include{frontmatter/Abstract} 
+    \include{frontmatter/Acknowledgements}
+    \include{frontmatter/Dissemination}
+    \openany % from here start on any page
+    \tableofcontents 
+    \newpage
+    \listoffigures
+    \newpage
+    \listoftables
+    \include{frontmatter/Notation}
+    \include{frontmatter/Acronym}
+    
+    \mainmatter
+    \openright % from here start only on right page
+    \input{chapters/Introduction}
+
+    % Background
+    \input{chapters/General_Relativity}
+    \input{chapters/Numerical_Relativity}
+    \input{chapters/Cosmology}
+    
+    % What I've done
+    \input{chapters/EBWeyl}
+    \input{chapters/Sim}
+
+    \input{chapters/Conclusion}
+
+    \appendix
+    \input{appendixes/Finite_differencing_test}
+    \openany % from here start on any page
+    \input{appendixes/Analytic_expressions}
+
+    \newrefcontext[sorting=anyvt]
+    \printbibliography
+\end{document}

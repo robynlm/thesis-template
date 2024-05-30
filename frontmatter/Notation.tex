@@ -1,0 +1,179 @@
+\chapter{Notation}
+
+\noindent The speed of light and the gravitational constant are taken to be one: $c=G=1$.
+
+\noindent Greek indices are used for spacetime components $\{0,\;1,\;2,\;3\}$, 
+
+\noindent while Latin indices are used for space components $\{1,\;2,\;3\}$.
+
+\vspace{0.6cm}
+
+\indent {\LARGE {\sc\textbf{General Relativity}}}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Spacetime}
+
+\begin{tabular}{p{0.145\textwidth}p{0.465\textwidth}p{0.39\textwidth}}
+$\tau$ & Proper time, $\frac{da}{d\tau} = \dot{a}$ \dotfill & \Eqref{eq: proper time deriv}\\
+$\delta_{\alpha\beta}$ & Kronecker delta & \\
+$g_{\mu\nu}$ & Spacetime metric \dotfill & \Eqref{eq: def line element}, $\{-,\;+,\;+,\;+\}$\\
+$A_{(\mu\nu)}$ & Symmetrisation of the tensor $A_{\mu\nu}$ \dotfill & \Eqref{eq: def symmetrisation and anti-symmetrisation} \\
+$A_{[\mu\nu]}$ & Anti-symmetrisation of the tensor $A_{\mu\nu}$ \dotfill & \Eqref{eq: def symmetrisation and anti-symmetrisation} \\
+\rmt{${\bar{\bar{A}}{}^{\alpha}}_{\beta}$ \& ${\vardbtilde{A}{}^{\alpha}}_{\beta}$} & \rmt{Tensor density \& pseudo-tensor respectively \dotfill} & \rmt{\Eqref{eq: transform tensor density} \& \Eqref{eq: transform pseudo-tensor}} \\
+$\epsilon_{\alpha\beta\mu\nu}$ & Levi-Civita tensor \dotfill & \Eqref{eq: def Levi-Civita tensor} \\
+\rmt{$\partial_\alpha$} & \rmt{Partial derivative \dotfill} & \rmt{$\partial_\alpha = \frac{\partial}{\partial x^\alpha}$} \\
+$\nabla_\alpha$ & Covariant derivative w.r.t. $g_{\mu\nu}$ \dotfill & \Eqref{eq: def covariant derivative} \\
+${\Gamma^{\alpha}}_{\mu \nu}$ & Christoffel symbols \dotfill & \Eqref{eq: def Christoffel symbol} \\
+${R^{\alpha}}_{\sigma \mu \nu}$ & Riemann tensor \dotfill & \Eqref{eq: def Riemann tensor} \\
+\rmt{$R_{\alpha \beta}$ \& $R$} & \rmt{Ricci tensor \& Ricci scalar (also $\4R$) \dotfill} & \rmt{\Eqref{eq: def Ricci tensor} \& \Eqref{eq: def Ricci scalar}}\\
+$C_{\alpha \beta \mu \nu}$ & Weyl tensor \dotfill & \Eqref{eq: def Weyl tensor} \\
+\end{tabular}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Projection along or orthogonally to a vector}
+
+\noindent The superscript $\{v\}$ denotes a variable defined in the frame of said timelike vector $v^\alpha$. 
+
+\noindent The pre-superscript $(3)$ applies for 3-dimensional quantities built from the spatial metric $P^{\{v\}}_{\alpha \beta}$. 
+
+\noindent For simplicity, quantities with $(3)$ are not given the $\{v\}$ superscript; instead, the relevant frame should be determined based on context.
+
+\begin{tabular}{p{0.145\textwidth}p{0.465\textwidth}p{0.39\textwidth}}
+$P^{\{v\}}_{\alpha \beta}$ & Projection tensor of $v^\alpha$ or Spatial metric \dotfill & \Eqref{eq: projection tensor}, $\{+,\;+,\;+\}$ \\
+$A^{\{v\}}_{\langle\mu\nu\rangle}$ & Spatially projected, symmetric and tracefree part of $A_{\mu\nu}$ & \Eqref{eq: traceless operator} \\
+$\mathcal{L}_{v}$ & Lie derivative along the vector $v^\alpha$ \dotfill & \Eqref{eq: def Lie derivative} \\
+$D^{\{v\}}_\alpha$ & Spatial covariant derivative w.r.t. $P^{\{v\}}_{\alpha \beta}$ \dotfill & \Eqref{eq: def spatial covariant derivative A} \\
+$D^{\{v\}} \times$ & \rmt{Spatial curl} operator \dotfill & \Eqref{eq: def curl} \\
+$\epsilon^{\{v\}}_{\beta\mu\nu}$ & Spatial Levi-Civita tensor \dotfill & \Eqref{eq: def spatial Levi-Civita tensor} \\
+$\3{\Gamma^{\alpha}}_{\mu \nu}$ & Spatial Christoffel symbols & \\
+$\3{R^{\alpha}}_{\sigma \mu \nu}$ & Spatial Riemann tensor \dotfill & \Eqref{eq: 3 Ricci identity} \\
+\rmt{$\3R_{\sigma \nu}$ \& $\3R$} & \rmt{Spatial Ricci tensor \& scalar respectively} & \\
+\end{tabular}
+
+\vspace{0.3cm}
+
+\newpage
+
+\noindent \textbf{Einstein's field equations}
+
+\begin{tabular}{p{0.125\textwidth}p{0.485\textwidth}p{0.39\textwidth}}
+$\Lambda$ & Cosmological constant & \\
+$G_{\alpha\beta}$ & Einstein tensor \dotfill & \Eqref{eq: def Einstein tensor} \\
+$\kappa$ & Einstein's gravitational constant \dotfill & $\kappa = 8 \pi G c^{-4} = 8 \pi$\\
+$T_{\alpha\beta}$ & Energy stress tensor \dotfill & \Eqref{eq: def energy-stress tensor} \\
+$T$ & Trace of the energy stress tensor \dotfill & \Eqref{eq: def trace energy-stress tensor} \\
+\end{tabular}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Matter}
+
+\begin{tabular}{p{0.125\textwidth}p{0.485\textwidth}p{0.39\textwidth}}
+$\rho^{\{v\}}$ & Energy density \dotfill & \Eqref{eq: def fluid rho q S} \\
+$q^{\{v\}}_{\alpha}$ & Energy flux or momentum density \dotfill & \Eqref{eq: def fluid rho q S} \\
+$S^{\{v\}}_{\alpha \beta}$ & Stress tensor \dotfill & \Eqref{eq: def fluid rho q S} \\
+$S^{\{v\}}$ & Trace of the stress tensor \dotfill & \Eqref{eq: def fluid p pi} \\
+$p^{\{v\}}$ & Pressure \dotfill & \Eqref{eq: def fluid p pi} \\
+$\pi^{\{v\}}_{\alpha \beta}$ & Anisotropic pressure \dotfill & \Eqref{eq: def fluid p pi} \\
+$\varrho^{\{v\}}$ & \rmt{Rest mass} energy density \dotfill & \Eqref{eq: rho0 and eps} \\
+$\varepsilon^{\{v\}}$ & Specific internal energy \dotfill & \Eqref{eq: rho0 and eps} \\
+$h^{\{v\}}$ & Specific enthalpy \dotfill & \Eqref{eq: enthalpy}
+\end{tabular}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Kinematical rest-energy frame}
+
+\noindent All of the following are uniquely defined in the \rmt{frame of the} fluid flow $u^\alpha$.
+
+\begin{tabular}{p{0.125\textwidth}p{0.485\textwidth}p{0.39\textwidth}}
+$u^\alpha$ & Fluid 4-velocity & \\
+$h_{\alpha\beta}$ & Projection tensor of $u^\alpha$ or Spatial metric \dotfill & \Eqref{eq: fluid proj tensor}, $\{+,\;+,\;+\}$\\
+$\Theta_{\alpha \beta}$ & Expansion tensor \dotfill & \Eqref{eq: def fluid kinematics} \\
+$\omega_{\alpha \beta}$ & Vorticity tensor \dotfill & \Eqref{eq: def fluid kinematics} \\
+$a^\alpha$ & Acceleration \dotfill & \Eqref{eq: def fluid kinematics} \\
+$\Theta$ & Expansion scalar \dotfill & \Eqref{eq: Theta trace and traceless part} \\
+$\sigma_{\alpha \beta}$ & Shear \dotfill & \Eqref{eq: Theta trace and traceless part} \\
+\end{tabular}
+
+\vspace{0.3cm}
+
+\noindent \textbf{Weyl tensor}
+
+\begin{tabular}{p{0.125\textwidth}p{0.485\textwidth}p{0.39\textwidth}}
+$E^{\{v\}}_{\alpha\beta}$ & Electric part of the Weyl tensor in the frame $v^\alpha$ \dotfill & \Eqref{eq: EBGeometrical} \\
+$B^{\{v\}}_{\alpha\beta}$ & Magnetic part of the Weyl tensor in the frame $v^\alpha$ \dotfill & \Eqref{eq: EBGeometrical} \\
+$Q^{\{v\}}_{\alpha\beta}$ & Complex combination of $E^{\{v\}}_{\alpha\beta}$ and $B^{\{v\}}_{\alpha\beta}$ \dotfill & \Eqref{eq: Q} \\
+$\Psi_0$, $\Psi_1$, $\Psi_2$, $\Psi_3$, $\Psi_4$ & Weyl scalars in the frame of the null tetrad $l^\alpha,\;k^\alpha,\;m^\alpha,\;\bar{m}^\alpha$ & \Eqref{eq: psis} \\
+$I$, $J$, $L_B$, $M$, $\mathcal{S}$, $\mathcal{D}$ & Frame independent invariants from $C_{\alpha \beta \mu \nu}$ \dotfill & Eq.~(\ref{eq: IJ with Weyl}, \ref{eq: LMinv}, \ref{eq: speciality_index}, \ref{eq: speciality_index without pole}) \\
+$K$, $L$, $N$ & Frame dependent invariants from $C_{\alpha \beta \mu \nu}$ \dotfill & \Eqref{eq: KLNinv} \\
+\end{tabular}
+
+\vspace{0.3cm}
+
+\newpage
+
+\indent {\LARGE {\sc\textbf{Numerical Relativity}}}
+
+\vspace{0.25cm}
+
+\begin{tabular}{p{0.125\textwidth}p{0.485\textwidth}p{0.39\textwidth}}
+$\gamma_{ij}$ & Projection tensor of $n^\alpha$ or Spatial metric \dotfill & \Eqref{eq: NR: proj metric}, $\{+,\;+,\;+\}$ \\
+$\alpha$ & Lapse & \\
+$\beta^{i}$ & Shift \dotfill & \Eqref{eq: def beta} \\
+$n^{i}$ & Timelike vector normal to $\gamma_{ij}$ \dotfill & \Eqref{eq: def n} \\
+$\mathfrak{a}^i$ & Acceleration of $n^{i}$ \dotfill & \Eqref{eq: NR acceleration} \\
+$t$ & Coordinate time \dotfill & \Eqref{eq: NR coord time} \\
+$K_{ij}$ & Extrinsic curvature \dotfill & \Eqref{eq: def extrinsic curvature} \\
+$K$ & Trace of extrinsic curvature \dotfill & \Eqref{eq: Kij trace and traceless part} \\
+$A_{ij}$ & Traceless part of the extrinsic curvature \dotfill & \Eqref{eq: Kij trace and traceless part} \\
+\end{tabular}
+
+\vspace{0.5cm}
+
+\indent {\LARGE {\sc\textbf{Cosmology}}}
+
+\vspace{0.25cm}
+
+\noindent \textbf{Homogeneous \& isotropic universe}
+
+\noindent The overhead bar identifies background quantities.
+
+\begin{tabular}{p{0.125\textwidth}p{0.485\textwidth}p{0.39\textwidth}}
+$a$ & Scale factor \dotfill & \Secref{sec: Cosmo: background: solutions} \\
+$\eta$ & Conformal time, $\frac{dg}{d\eta} = g'$ \dotfill & \Eqref{eq: proper and conformal time} \\
+$H$ & Hubble's scalar \dotfill & \Eqref{eq: Hubble expansion} \\
+$\mathcal{H}$ & Conformal Hubble's scalar \dotfill & \Eqref{eq: conformal Hubble expansion} \\
+$z$ & Redshift \dotfill & \Eqref{eq: def redshift} \\
+$\bar{\Theta}$ & FLRW expansion scalar \dotfill & \Eqref{eq: def FLRW expansion scalar} \\
+$\bar{\rho}$ & FLRW energy density in the $u^\mu$ frame \dotfill & \Eqref{eq: cosmo rho func a} \\
+$\Omega_k$, $\Omega_m$, $\Omega_\Lambda$ & Dimensionless density parameters of curvature, matter and dark energy & \Eqref{eq: background rho} \\
+\end{tabular}
+
+\vspace{0.25cm}
+
+\noindent \textbf{Perturbation theory \& structure formation}
+
+\noindent The $(1)$ superscript identifies a first-order perturbative term.
+
+\begin{tabular}{p{0.125\textwidth}p{0.485\textwidth}p{0.39\textwidth}}
+$\phi$, $\omega$, $\psi$, $\chi$ & Scalar perturbations to the spacetime metric \dotfill & Eq.~(\ref{eq: perturbed metric}, \ref{eq: omega decomp}, \ref{eq: chi decomp}) \\
+$\omega^{S}_i$, $\chi^{S}_i$ & Vector perturbations to the spacetime metric \dotfill & Eq.~(\ref{eq: perturbed metric}, \ref{eq: omega decomp}, \ref{eq: chi decomp}) \\
+$\chi^{TT}_{ij}$ & Tensor perturbations to the spacetime metric \dotfill & Eq.~(\ref{eq: perturbed metric}, \ref{eq: chi decomp}) \\
+$\delta$ & Density contrast \dotfill & \Eqref{eq: def delta} \\
+$\delta^{(1)}_C$ & Linear density contrast a collapse \dotfill & \Eqref{eq: def linear delta at TA V1 and C} \\
+$f_1$ & Growth factor \dotfill & \Eqref{eq: def growth factor} \\
+$\vartheta_{ij}$ & Deformation tensor \dotfill & \Eqref{eq: pert theta} \\
+$\vartheta$ & Deformation scalar\rmt{, trace of $\vartheta_{ij}$} \dotfill & \Eqref{eq: pert theta} \\
+$\square_{ij}$ & Traceless operator \dotfill & $\square_{ij} = \partial_i\partial_j - \frac{1}{3}\delta_{ij}\delta^{kl}\partial_k\partial_l$ \\
+$\nabla^2$ & Laplacian operator \dotfill & $\nabla^2 = g^{\alpha\beta}\nabla_{\alpha}\nabla_{\beta}$ \\
+$\mathcal{R}_c$ & Comoving curvature perturbation \dotfill & \Eqref{eq: Rc_comoving_curvature_perturbation} \\
+$\zeta$ & Uniform-density curvature perturbation \dotfill & \Eqref{eq: Rc_comoving_curvature_perturbation} \\
+\rmt{$\Phi$, $\Psi$} & \rmt{Bardeen potentials: Newtonian potential and conformal Newtonian curvature perturbation} & \Eqref{eq: def Bardeen potentials} \\
+$\langle \phi \rangle_{\mathcal{D}^{\{v\}}}$ & Average of $\phi$ on the domain $\mathcal{D}^{\{v\}}$ which is defined on the $P^{\{v\}}_{\alpha \beta}$ spatial hypersurface & \Eqref{eq: def domain average} \\
+$\mathcal{Q}_{\mathcal{D}^{\{u\}}}$ & Backreaction \dotfill & \Eqref{eq: def Backreaction} \\
+\end{tabular}
+
+

@@ -1,0 +1,201 @@
+%------------------------------------------------
+%   Useful links
+%------------------------------------------------
+\usepackage{lipsum} % for dummy text only
+%https://www.overleaf.com/latex/templates/phd-thesis-template-for-cambridge-university-engineering-department-cued-latex-xelatex-and-lualatex-support-v2-dot-1/kgfqybfnqkdf
+%https://www.miede.de/
+% https://ctan.mines-albi.fr/macros/latex/contrib/memoir/memman.pdf
+% http://www.ebookation.com/wp-content/uploads/2010/03/memoirchapstyles.pdf
+
+%------------------------------------------------
+%   My commands
+%------------------------------------------------
+\def\rmt#1{\textcolor{black}{#1}} % different colour for edits later
+\newcommand{\4}{{}^{(4)}}
+\newcommand{\3}{{}^{(3)}}
+\def\dav#1{\langle #1 \rangle_{\mathcal{D}^{\{u\}}}}
+\def\Eqref#1{Eq.~\eqref{#1}}
+\def\Figref#1{Fig.~(\ref{#1})}
+\def\Tabref#1{Table~(\ref{#1})}
+\def\Chapref#1{Chapter~\ref{#1}}
+\def\Secref#1{Section~\ref{#1}}
+\def\Appref#1{Appendix~\ref{#1}}
+\newcommand{\vardbtilde}[1]{\tilde{\raisebox{0pt}[0.85\height]{$\tilde{#1}$}}} % double tilde for notation of pseudo-tensors
+
+% Journals
+\usepackage{verbatim}
+\begin{comment}
+\def\ap{Ann. Phys.}
+\def\apj{Astrophys. J.}
+\def\cjm{Can. J. Math.}
+\def\cqg{Class. Quantum Grav.}
+\def\cmp{Commun. Math. Phys.}
+\def\grg{Gen. Relativ. Gravit.}
+\def\ijgmmp{Int. J. Geom. Methods Mod. Phys.}
+\def\ijmp{Int. J. Mod. Phys. {A}}
+\def\jcap{J. Cosmol. Astropart. Phys.}
+\def\jmp{J. Math. Phys.}
+\def\lrr{Living Rev. Relativ.}
+\def\mnras{Mon. Not. R. Astron. Soc.}
+\def\np{Nat. Phys.}
+\def\pdu{Phys. Dark Univ.}
+\def\pl{Phys. Lett. {A}}
+\def\pr{Phys. Rep.}
+\def\prd{Phys. Rev. {D}}
+\def\prl{Phys. Rev. Lett.}
+\def\prsa{Proc. R. Soc. {A}}
+\def\ptep{Prog. Theor. Exp. Phys.}
+\def\ptp{Prog. Theor. Phys.}
+\end{comment}
+
+\def\ap{ Annals of Physics }
+\def\apj{ The Astrophysical Journal }
+\def\apjl{ The Astrophysical Journal Letter }
+\def\cjm{ Canadian Journal of Mathematics }
+\def\cqg{ Classical and Quantum Gravity }
+\def\cmp{ Communications in Mathematical Physics }
+\def\grg{ General Relativity and Gravitation }
+\def\ijgmmp{ International Journal of Geometric Methods in Modern Physics }
+\def\ijmp{ International Journal of Modern Physics A }
+\def\jcap{ Journal of Cosmology and Astroparticle Physics }
+\def\jmp{ Journal of Mathematical Physics }
+\def\lrr{ Living Reviews in Relativity }
+\def\mnras{ Monthly Notices of the Royal Astronomical Society }
+\def\np{ Nature Physics }
+\def\pdu{ Physics of the Dark Universe}
+\def\pl{ Physics Letters A }
+\def\pr{ Physics Reports }
+\def\prd{ Physical Review D }
+\def\prl{ Physical Review Letter }
+\def\prsa{ Proceedings of the Royal Society of London. A. }
+\def\ptep{ Progress of Theoretical and Experimental Physics }
+\def\ptp{ Progress of Theoretical Physics }
+
+%------------------------------------------------
+%   Math packages
+%------------------------------------------------
+\usepackage{amsmath, 
+            amsfonts,
+            amssymb}
+\usepackage{ yhmath }
+\usepackage{ upgreek }
+
+%------------------------------------------------
+%   Choose font
+%------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage{cochineal}
+\usepackage{anyfontsize} % Bcs I'm petty
+
+%------------------------------------------------
+%   Colour hyperlink
+%------------------------------------------------
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, 
+            linktoc=page,
+            linkcolor=NavyBlue,  
+            urlcolor=Fuchsia,  
+            citecolor=OliveGreen}
+
+%------------------------------------------------
+%   Format citations
+%------------------------------------------------
+\usepackage[backend=biber,
+            language=auto, 
+            style=authoryear-comp, 
+            uniquename=false,
+            sorting=ynt, 
+            maxbibnames=10, 
+            backref=true, 
+            natbib=true]{biblatex}
+
+\renewbibmacro*{in:}
+               {\iffieldundef{journaltitle}
+                {}
+                {\printtext{\bibstring{in}\intitlepunct}}}
+ 
+\DeclareCiteCommand{\fancyquotecite}
+                   {\usebibmacro{prenote}}
+                   {\usebibmacro{citeindex}
+	            \usebibmacro{fancyquotecite}}
+                   {\multicitedelim}
+                   {\usebibmacro{postnote}}
+
+\newbibmacro{fancyquotecite}
+            {\printnames[given-family]{labelname}
+             \setunit{\addcomma\space}
+             \printfield{maintitle}
+             \setunit{\addcomma\space}
+             \printfield{booktitle}
+             \setunit{\addcomma\space}
+             \printfield{title}}
+
+%------------------------------------------------
+%   Format page
+%------------------------------------------------
+\usepackage{geometry}
+\geometry{left=25mm, 
+          right=25mm, 
+          bindingoffset=10mm, 
+          top=25mm, 
+          bottom=25mm}
+\OnehalfSpacing
+\pagestyle{headings}
+
+%------------------------------------------------
+%   Chapter title styles
+%------------------------------------------------
+\makechapterstyle{mystyle}
+                 {\renewcommand{\chapterheadstart}
+                               {\vspace*{\beforechapskip}\hrule\bigskip}
+                  \renewcommand{\chapnamefont}
+                               {\centering\huge\scshape\bfseries}
+                  \renewcommand{\chapnumfont}
+                               {\centering\huge\scshape\bfseries}
+                  \renewcommand{\chaptitlefont}
+                               {\centering\huge\scshape\bfseries}
+                  \renewcommand{\printchaptername}
+                               {\centering}
+                  \renewcommand{\chapternamenum}
+                               {\centering\huge\scshape\bfseries}
+                  \renewcommand{\printchapternum}
+                               {\centering \chapnumfont \thechapter}
+                  \renewcommand{\afterchapternum}
+                               {  -  }
+                  \renewcommand{\afterchaptertitle}
+                               {\par\nobreak\bigskip\hrule\vskip\afterchapskip}}
+\chapterstyle{mystyle}
+
+%------------------------------------------------
+%   Section title styles
+%------------------------------------------------
+\setsecheadstyle{\LARGE\bfseries}
+\setsubsecheadstyle{\Large\bfseries}
+\setsubsubsecheadstyle{\large\bfseries}
+\maxsecnumdepth{subsubsection}
+
+%------------------------------------------------
+%   Format table of content
+%------------------------------------------------
+\maxtocdepth{subsubsection}
+\setlength{\cftbeforechapterskip}{0em}
+
+%------------------------------------------------
+%   Table tools
+%------------------------------------------------
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{multirow}
+
+%------------------------------------------------
+%   Code font
+%------------------------------------------------
+\usepackage{listings}
+
+%------------------------------------------------
+%   Fancy itemise symbol
+%------------------------------------------------
+\usepackage{enumitem,
+            pifont}
